@@ -11,7 +11,7 @@ ignore_lines: []
 
 # Drop whole posts whose opening line is a CV / resume announcement.
 exclude_posts:
-  - '^\s*(?:🔥\s*Резюме|📃\s*Резюме|🌙\s*Резюме|#резюме|резюме)\b.*$'
+  - '^\s*(?:🔥\s*Резюме|📃\s*Резюме|🌙\s*Резюме|#резюме|резюме|🏆\s*Лучшие\s*резюме)\b.*$'
 
 # Initial backfill window (days). Subsequent runs are incremental.
 initial_backfill_days: 30
