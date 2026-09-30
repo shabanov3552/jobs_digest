@@ -1,6 +1,6 @@
 # Which role the digest is for: profiles/<name>.yml holds the role's regexes
 # and the page title. Ships with `product` and `frontend`.
-profile: product
+profile: frontend
 
 tg_folder_name: vacancy
 
@@ -8,6 +8,10 @@ tg_folder_name: vacancy
 # ad for a bot. Regexes; a matching line is skipped when the title, fields
 # and description are read (the full post is still shown as is).
 ignore_lines: []
+
+# Drop whole posts whose opening line is a CV / resume announcement.
+exclude_posts:
+  - '^\s*(?:🔥\s*Резюме|📃\s*Резюме|🌙\s*Резюме|#резюме|резюме)\b.*$'
 
 # Initial backfill window (days). Subsequent runs are incremental.
 initial_backfill_days: 30
