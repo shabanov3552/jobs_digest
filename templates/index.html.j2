@@ -16,7 +16,7 @@
     <span class="masthead-kicker mono">
       <span class="live-dot"></span>TG&nbsp;DIGEST
     </span>
-    <span class="masthead-date mono">{{ generated_at[:4] }} · {{ generated_at[5:7] }} · {{ generated_at[8:10] }}</span>
+    <span class="masthead-date mono">{{ generated_at[8:10] }}{{ generated_at[5:7] }}{{ generated_at[:4] }}</span>
   </div>
   <h1 class="page-title">{{ site.title }}, <em>{{ site.tagline }}</em></h1>
   <div class="masthead-search">
@@ -35,7 +35,7 @@
     >
   </div>
   <div class="masthead-dateline mono">
-    Updated {{ generated_at[:10] }} · {{ generated_at[11:16] }} UTC
+    Updated {{ generated_at[8:10] }}{{ generated_at[5:7] }}{{ generated_at[:4] }} · {{ generated_at[11:16] }} UTC
   </div>
 </header>
 
