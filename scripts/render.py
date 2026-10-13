@@ -2,8 +2,9 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -35,7 +36,7 @@ def run() -> None:
         autoescape=select_autoescape(["html"]),
     )
     template = env.get_template("index.html.j2")
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_at = datetime.now(ZoneInfo("Asia/Krasnoyarsk")).isoformat()
     tags = [{"key": t.key, "label": t.label} for t in PROFILE.tags]
     html = template.render(
         vacancies=vacancies,
